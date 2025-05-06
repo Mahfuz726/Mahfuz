@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Mahfuz | Professional Portfolio</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -14,10 +14,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Add this right after the opening <body> tag -->
+    <div class="mobile-overlay"></div>
+
     <!-- Preloader -->
     <div class="preloader">
         <div class="loader">
@@ -56,10 +62,13 @@
                         <a class="nav-link" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#Experience">Experience</a>
-                  </li>
+                      <a class="nav-link" href="#experience">Experience</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -90,7 +99,7 @@
                         <div class="social-icons animate__animated animate__fadeInUp animate__delay-3s">
                             <a href="https://www.facebook.com/Mahfuz726" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://x.com/Mdmahfuz726" target="_blank" class="social-icon" data-tooltip="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-                            <a href="https://www.behance.net/mdmahfuz" target="_blank" class="social-icon"><i class="fab fa-behance"></i>
+                            <a href="https://www.behance.net/mdmahfuz" target="_blank" class="social-icon"><i class="fab fa-behance"></i></a>
                             <a href="https://www.linkedin.com/in/md-mahfuz-190591199/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                             <a href="https://github.com/Mahfuz726" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
                         </div>
@@ -101,10 +110,10 @@
                         <div class="image-wrapper">
                             <img src="my1st.jpg" alt="Mahfuz" class="img-fluid">
                             <div class="image-bg"></div>
-                            <div class="image-badge">
+                            <!-- <div class="image-badge">
                                 <div class="badge-content">
                                     <h5>2+ Years</h5>
-                                    <p>Experience</p>
+                                    <p>Experience</p> -->
                                 </div>
                             </div>
                         </div>
@@ -142,87 +151,124 @@
                       <p>Currently, I am a hardworking and adaptable worker who is studying Computer Science and Engineering while successfully finished diploma in Electrical Engineering. My academic background consists of technical experience in both software development and hardware systems, although I am a graphic designer by heart. It affords me the ability to bring intensive problem-solving skills, a strong illustration skill set, a comprehensive technical skill set, and an ability to construct high quality work in both technical as well as creative circumstances.</p>
                       
                       <div class="about-tabs">
-                          <ul class="nav nav-tabs" id="aboutTabs" role="tablist">
-                              <li class="nav-item" role="presentation">
-                                  <button class="nav-link active" id="skills-tab-btn" data-bs-toggle="tab" data-bs-target="#skills-tab" type="button" role="tab" aria-controls="skills-tab" aria-selected="true">Main Skills</button>
-                              </li>
-                              <li class="nav-item" role="presentation">
-                                  <button class="nav-link" id="education-tab-btn" data-bs-toggle="tab" data-bs-target="#education-tab" type="button" role="tab" aria-controls="education-tab" aria-selected="false">Education</button>
-                              </li>
-                          </ul>
-                          <div class="tab-content" id="aboutTabsContent">
-                              <div class="tab-pane fade show active" id="skills-tab" role="tabpanel" aria-labelledby="skills-tab-btn">
-                                  <div class="skills-list">
-                                      <div class="skill-item">
-                                          <div class="skill-name">
-                                              <i class="fas fa-laptop-code"></i>
-                                              <span>Web Development</span>
-                                          </div>
-                                          <div class="skill-description">
-                                              Full-stack development with modern frameworks and best practices
-                                          </div>
-                                      </div>
-                                      <div class="skill-item">
-                                          <div class="skill-name">
-                                              <i class="fas fa-pencil-ruler"></i>
-                                              <span>UI/UX Design</span>
-                                          </div>
-                                          <div class="skill-description">
-                                              User-centered design with focus on accessibility and interaction
-                                          </div>
-                                      </div>
-                                      <div class="skill-item">
-                                          <div class="skill-name">
-                                              <i class="fas fa-palette"></i>
-                                              <span>Graphic Design</span>
-                                          </div>
-                                          <div class="skill-description">
-                                              Visual storytelling through typography, color, and composition
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="tab-pane fade" id="education-tab" role="tabpanel" aria-labelledby="education-tab-btn">
-                                  <div class="timeline">
-                                      <div class="timeline-item">
-                                          <div class="timeline-header">
-                                              <h5>BACHELOR OF SCIENCE (B.Sc.) in Computer Science & Engineering</h5>
-                                              <span class="timeline-date">October 2021 - Present</span>
-                                          </div>
-                                          <span class="timeline-institution">Green University of Bangladesh, Dhaka</span>
-                                          <p>Currently pursuing degree with focus on web development and software engineering principles.</p>
-                                      </div>
-                                      
-                                      <div class="timeline-item">
-                                          <div class="timeline-header">
-                                              <h5>DIPLOMA ENGINEERING (D.E) in Electrical Engineering</h5>
-                                              <!--<span class="timeline-date">[Years Attended]</span>-->
-                                          </div>
-                                          <span class="timeline-institution">Oxford Private Engineering Institute, Jashore</span>
-                                          <p>Completed comprehensive electrical engineering program with practical applications.</p>
-                                      </div>
-                                      
-                                      <div class="timeline-item">
-                                          <div class="timeline-header">
-                                              <h5>HIGHER SECONDARY SCHOOL CERTIFICATE (HSC) in Science</h5>
-                                              <!--<span class="timeline-date">[Years Attended]</span>-->
-                                          </div>
-                                          <span class="timeline-institution">Jashore Govt. City College, Jashore</span>
-                                          <p>Specialized in science stream with focus on physics, chemistry, and mathematics.</p>
-                                      </div>
-                                      
-                                      <div class="timeline-item">
-                                          <div class="timeline-header">
-                                              <h5>SECONDARY SCHOOL CERTIFICATE (SSC) in Science</h5>
-                                              <!--<span class="timeline-date">[Years Attended]</span>-->
-                                          </div>
-                                          <span class="timeline-institution">Satkhira Govt. High School, Satkhira</span>
-                                          <p>Foundation in science and mathematics with distinction.</p>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                        <ul class="nav nav-tabs modern-tabs" id="aboutTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="skills-tab-btn" data-bs-toggle="tab" data-bs-target="#skills-tab" type="button" role="tab" aria-controls="skills-tab" aria-selected="true">
+                                    <i class="fas fa-code"></i>
+                                    <span>Main Skills</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="education-tab-btn" data-bs-toggle="tab" data-bs-target="#education-tab" type="button" role="tab" aria-controls="education-tab" aria-selected="false">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Education</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content modern-tab-content" id="aboutTabsContent">
+                            <div class="tab-pane fade show active" id="skills-tab" role="tabpanel" aria-labelledby="skills-tab-btn">
+    <div class="skills-list">
+        <div class="skill-item">
+            <div class="skill-info">
+                <div class="skill-name">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Web Development</span>
+                </div>
+            </div>
+            <div class="skill-description">
+                Full-stack development with modern frameworks and best practices
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-info">
+                <div class="skill-name">
+                    <i class="fas fa-pencil-ruler"></i>
+                    <span>UI/UX Design</span>
+                </div>
+            </div>
+            <div class="skill-description">
+                User-centered design with focus on accessibility and interaction
+            </div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-info">
+                <div class="skill-name">
+                    <i class="fas fa-palette"></i>
+                    <span>Graphic Design</span>
+                </div>
+            </div>
+            <div class="skill-description">
+                Visual storytelling through typography, color, and composition
+            </div>
+        </div>
+    </div>
+</div>
+                            <div class="tab-pane fade" id="education-tab" role="tabpanel" aria-labelledby="education-tab-btn">
+                                <div class="modern-timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot">
+                                            <i class="fas fa-university"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <div class="timeline-header">
+                                                <h5>BACHELOR OF SCIENCE (B.Sc.) in Computer Science & Engineering</h5>
+                                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> October 2021 - Present</span>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <span class="timeline-institution">Green University of Bangladesh, Dhaka</span>
+                                                <p>Focused on web development, software engineering, and programming concepts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot">
+                                            <i class="fas fa-bolt"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <div class="timeline-header">
+                                                <h5>DIPLOMA ENGINEERING (D.E) in Electrical Engineering</h5>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <span class="timeline-institution">Oxford Private Engineering Institute, Jashore</span>
+                                                <p> Studied electrical circuits, power systems, and practical electronics.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot">
+                                            <i class="fas fa-flask"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <div class="timeline-header">
+                                                <h5>HIGHER SECONDARY SCHOOL CERTIFICATE (HSC) in Science</h5>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <span class="timeline-institution">Jashore Govt. City College, Jashore</span>
+                                                <p>Emphasized physics, chemistry, and higher mathematics.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot">
+                                            <i class="fas fa-book"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <div class="timeline-header">
+                                                <h5>SECONDARY SCHOOL CERTIFICATE (SSC) in Science</h5>
+                                            </div>
+                                            <div class="timeline-body">
+                                                <span class="timeline-institution">Satkhira Govt. High School, Satkhira</span>
+                                                <p>Built foundation in general science, mathematics.</p> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                       
                       <div class="about-cta">
                           <a href="my cv.pdf" class="btn btn-primary me-3" download="Mahfuz_Resume.pdf">
@@ -259,10 +305,10 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-card">
                         <div class="service-icon">
-                            <i class="fas fa-mobile-alt"></i>
+                            <i class="fas fa-palette"></i>
                             <div class="icon-bg"></div>
                         </div>
-                        <h3>Graphic Designer</h3>
+                        <h3>Graphic Design</h3>
                         <p>Creative graphic designer crafting bold, modern visuals. Turning ideas into standout designs.</p>
                         <a href="#" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -270,7 +316,7 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-card">
                         <div class="service-icon">
-                            <i class="fas fa-paint-brush"></i>
+                            <i class="fas fa-pencil-ruler"></i>
                             <div class="icon-bg"></div>
                         </div>
                         <h3>UI/UX Design</h3>
@@ -278,41 +324,8 @@
                         <a href="#" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <!--<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-search-chart"></i>
-                            <div class="icon-bg"></div>
-                        </div>
-                        <h3>SEO Optimization</h3>
-                        <p>Improving website visibility and ranking through comprehensive search engine optimization strategies.</p>
-                        <a href="#" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-server"></i>
-                            <div class="icon-bg"></div>
-                        </div>
-                        <h3>Backend Development</h3>
-                        <p>Building robust server-side applications with Node.js, Express, MongoDB, and other modern technologies.</p>
-                        <a href="#" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-rocket"></i>
-                            <div class="icon-bg"></div>
-                        </div>
-                        <h3>Web Performance</h3>
-                        <p>Optimizing websites for blazing fast loading speeds and smooth user interactions.</p>
-                        <a href="#" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
             </div>
-        </div>-->
+        </div>
     </section>
 
     <!-- Skills Section -->
@@ -329,51 +342,65 @@
                 <h3>Technical Proficiencies</h3>
                 <p>Mastered through hands-on projects and continuous upskilling:</p>
                 
-                <div class="skills-visual">
-                  <!-- Programming Languages -->
-                  <div class="skill-tag">
-                    <div class="skill-icon">
-                      <i class="fab fa-html5"></i>
-                    </div>
-                    <span>HTML5</span>
-                  </div>
-                  <div class="skill-tag">
-                    <div class="skill-icon">
-                      <i class="fab fa-css3-alt"></i>
-                    </div>
-                    <span>CSS3/SASS</span>
-                  </div>
-                  <div class="skill-tag">
-                    <div class="skill-icon">
-                      <i class="fab fa-js"></i>
-                    </div>
-                    <span>JavaScript</span>
-                  </div>
-                  <div class="skill-tag">
-                    <div class="skill-icon">
-                      <i class="fab fa-react"></i>
-                    </div>
-                    <span>React.js</span>
-                  </div>
-                  <div class="skill-tag">
-                    <div class="skill-icon">
-                      <i class="fas fa-code"></i>
-                    </div>
-                    <span>C Programming</span>
-                  </div>
-                  <div class="skill-tag">
-                    <div class="skill-icon">
-                      <i class="fab fa-python"></i>
-                    </div>
-                    <span>Python</span>
-                  </div>
-                  <div class="skill-tag">
-                    <div class="skill-icon">
-                      <i class="fas fa-database"></i>
-                    </div>
-                    <span>MySQL</span>
-                  </div>
-                </div>
+                <div class="modern-skills-visual">
+  <!-- Programming Languages -->
+  <div class="modern-skill-tag">
+    <div class="skill-icon">
+      <i class="fab fa-html5"></i>
+    </div>
+    <div class="skill-info">
+      <span class="skill-name">HTML5</span>
+    </div>
+  </div>
+  <div class="modern-skill-tag">
+    <div class="skill-icon">
+      <i class="fab fa-css3-alt"></i>
+    </div>
+    <div class="skill-info">
+      <span class="skill-name">CSS3/SASS</span>
+    </div>
+  </div>
+  <div class="modern-skill-tag">
+    <div class="skill-icon">
+      <i class="fab fa-js"></i>
+    </div>
+    <div class="skill-info">
+      <span class="skill-name">JavaScript</span>
+    </div>
+  </div>
+  <div class="modern-skill-tag">
+    <div class="skill-icon">
+      <i class="fab fa-react"></i>
+    </div>
+    <div class="skill-info">
+      <span class="skill-name">React.js</span>
+    </div>
+  </div>
+  <div class="modern-skill-tag">
+    <div class="skill-icon">
+      <i class="fas fa-code"></i>
+    </div>
+    <div class="skill-info">
+      <span class="skill-name">C Programming</span>
+    </div>
+  </div>
+  <div class="modern-skill-tag">
+    <div class="skill-icon">
+      <i class="fab fa-python"></i>
+    </div>
+    <div class="skill-info">
+      <span class="skill-name">Python</span>
+    </div>
+  </div>
+  <div class="modern-skill-tag">
+    <div class="skill-icon">
+      <i class="fas fa-database"></i>
+    </div>
+    <div class="skill-info">
+      <span class="skill-name">MySQL</span>
+    </div>
+  </div>
+</div>
               </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
@@ -381,123 +408,188 @@
                 <h3>Professional & Creative Skills</h3>
                 <p>Complementary abilities that enhance project execution:</p>
                 
-                <div class="skills-grid">
-                  <div class="competency-card">
-                    <div class="competency-icon">
-                      <i class="fas fa-comments"></i>
-                    </div>
-                    <h4>Communication</h4>
-                    <p>Clear articulation of technical concepts</p>
-                  </div>
-                  <div class="competency-card">
-                    <div class="competency-icon">
-                      <i class="fas fa-users"></i>
-                    </div>
-                    <h4>Team Collaboration</h4>
-                    <p>Cross-functional coordination</p>
-                  </div>
-                  <div class="competency-card">
-                    <div class="competency-icon">
-                      <i class="fas fa-file-excel"></i>
-                    </div>
-                    
-                    <h4>Microsoft Office</h4>
-                    <p>Advanced Excel & documentation</p>
-                  </div>
-                  <div class="competency-card">
-                    <div class="competency-icon">
-                      <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h4>Graphic Design</h4>
-                    <p>Visual communication</p>
-                  </div>
-                  <div class="competency-card">
-                    <div class="competency-icon">
-                      <i class="fas fa-ad"></i>
-                    </div>
-                    <h4>Adobe Photoshop</h4>
-                    <p>Photo editing & compositing</p>
-                  </div>
-                  <div class="competency-card">
-                    <div class="competency-icon">
-                      <i class="fas fa-pencil-ruler"></i>
-                    </div>
-                    <h4>Adobe Illustrator</h4>
-                    <p>Vector graphics creation</p>
-                  </div>
-                </div>
+                <div class="modern-skills-grid">
+  <div class="modern-competency-card">
+    <div class="competency-icon">
+      <i class="fas fa-comments"></i>
+    </div>
+    <div class="competency-info">
+      <h4>Communication</h4>
+      <p>Clear articulation of technical concepts</p>
+    </div>
+  </div>
+  <div class="modern-competency-card">
+    <div class="competency-icon">
+      <i class="fas fa-users"></i>
+    </div>
+    <div class="competency-info">
+      <h4>Team Collaboration</h4>
+      <p>Cross-functional coordination</p>
+    </div>
+  </div>
+  <div class="modern-competency-card">
+    <div class="competency-icon">
+      <i class="fas fa-file-excel"></i>
+    </div>
+    <div class="competency-info">
+      <h4>Microsoft Office</h4>
+      <p>Advanced Excel & documentation</p>
+    </div>
+  </div>
+  <div class="modern-competency-card">
+    <div class="competency-icon">
+      <i class="fas fa-paint-brush"></i>
+    </div>
+    <div class="competency-info">
+      <h4>Graphic Design</h4>
+      <p>Visual communication</p>
+    </div>
+  </div>
+  <div class="modern-competency-card">
+    <div class="competency-icon">
+      <i class="fas fa-image"></i>
+    </div>
+    <div class="competency-info">
+      <h4>Adobe Photoshop</h4>
+      <p>Photo editing & compositing</p>
+    </div>
+  </div>
+  <div class="modern-competency-card">
+    <div class="competency-icon">
+      <i class="fas fa-pencil-ruler"></i>
+    </div>
+    <div class="competency-info">
+      <h4>Adobe Illustrator</h4>
+      <p>Vector graphics creation</p>
+    </div>
+  </div>
+</div>
               </div>
             </div>
           </div>
         </div>
       </section>
     <!-- Experience  -->
-    <section id="Experience" class="section-padding bg-light">
-      <div class="container">
-          <div class="section-title" data-aos="fade-up">
-              <h5 class="subtitle">Work History</h5>
-              <h2>Professional <span>Experience</span></h2>
-              <div class="section-divider"></div>
+    <section id="experience" class="section-padding bg-light">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h5 class="subtitle">Work History</h5>
+      <h2>Professional <span>Experience</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    
+    <div class="premium-experience">
+      <!-- OnekKisubd.com -->
+      <div class="experience-card" data-aos="fade-right">
+        <div class="experience-header">
+          <div class="experience-company-logo">
+            <img src="Onekkisu.jpg" alt="OnekKisubd Logo">
           </div>
-          <div class="timeline">
-            <!-- OnekKisubd.com -->
-            <div class="timeline-item" data-aos="fade-right">
-              <div class="timeline-header">
-                <h3>Graphic Designer & Web Manager</h3>
-                <div class="company">
-                  <span class="company-name">OnekKisubd.com</span>
-                  <span class="duration">2024 - Present</span>
-                </div>
-              </div>
-              <div class="timeline-content">
-                <ul class="responsibilities">
-                  <li><i class="fas fa-circle"></i> Full-time graphic designer for all product content</li>
-                  <li><i class="fas fa-circle"></i> Handled complete website design and maintenance for Onekkisu.bd</li>
-                  <li><i class="fas fa-circle"></i> Managed all visual branding and marketing materials</li>
-                </ul>
-              </div>
-            </div>
-      
-            <!-- Verantixai.com -->
-            <div class="timeline-item" data-aos="fade-left">
-              <div class="timeline-header">
-                <h3>Web Developer & Graphic Designer</h3>
-                <div class="company">
-                  <span class="company-name">Verantixai.com</span>
-                  <span class="duration">2024 - Present</span>
-                </div>
-              </div>
-              <div class="timeline-content">
-                <h4>AI Annotation Specialist:</h4>
-                <ul class="responsibilities">
-                  <li><i class="fas fa-circle"></i> Bounding Box - Precise object detection in images/videos</li>
-                  <li><i class="fas fa-circle"></i> Polygon Annotation - Complex shape outlining</li>
-                  <li><i class="fas fa-circle"></i> Line Annotation - Path and boundary marking</li>
-                </ul>
-                <h4>Additional Roles:</h4>
-                <ul class="responsibilities">
-                  <li><i class="fas fa-circle"></i> Front-end development for company platforms</li>
-                  <li><i class="fas fa-circle"></i> Designed marketing materials and UI components</li>
-                </ul>
+          <div class="experience-meta">
+            <h3>Graphic Designer & Web Manager</h3>
+            <div class="experience-company">
+              <span class="company-name">OnekKisubd.com</span>
+              <div class="experience-duration">
+                <i class="far fa-calendar-alt"></i>
+                <span>2024 - Present</span>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    <!-- Projects Section -->
-    <section id="projects" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h5 class="subtitle">My Portfolio</h5>
-                <h2>Recent <span>Projects</span></h2>
-                <div class="section-divider"></div>
+        <div class="experience-content">
+          <div class="experience-description">
+            <p>Responsible for all visual aspects of the company's online presence, including product design, website maintenance, and marketing materials.</p>
+          </div>
+          <div class="key-responsibilities">
+            <h4>Key Responsibilities</h4>
+            <ul>
+              <li>
+                <div class="responsibility-icon"><i class="fas fa-palette"></i></div>
+                <div class="responsibility-text">Full-time graphic designer for all product content</div>
+              </li>
+              <li>
+                <div class="responsibility-icon"><i class="fas fa-laptop-code"></i></div>
+                <div class="responsibility-text">Handled complete website design and maintenance for Onekkisu.bd</div>
+              </li>
+              <li>
+                <div class="responsibility-icon"><i class="fas fa-paint-brush"></i></div>
+                <div class="responsibility-text">Managed all visual branding and marketing materials</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Verantixai.com -->
+      <div class="experience-card" data-aos="fade-left">
+        <div class="experience-header">
+          <div class="experience-company-logo">
+            <img src="Verantax.jpg" alt="Verantixai Logo">
+          </div>
+          <div class="experience-meta">
+            <h3>Web Developer & Graphic Designer</h3>
+            <div class="experience-company">
+              <span class="company-name">Verantixai.com</span>
+              <div class="experience-duration">
+                <i class="far fa-calendar-alt"></i>
+                <span>2024 - Present</span>
+              </div>
             </div>
+          </div>
+        </div>
+        <div class="experience-content">
+          <div class="experience-description">
+            <p>Specialized in AI annotation while contributing to front-end development and design for the company's digital platforms.</p>
+          </div>
+          <div class="key-responsibilities">
+            <h4>AI Annotation Specialist</h4>
+            <ul>
+              <li>
+                <div class="responsibility-icon"><i class="fas fa-object-group"></i></div>
+                <div class="responsibility-text">Bounding Box - Precise object detection in images/videos</div>
+              </li>
+              <li>
+                <div class="responsibility-icon"><i class="fas fa-draw-polygon"></i></div>
+                <div class="responsibility-text">Polygon Annotation - Complex shape outlining</div>
+              </li>
+              <li>
+                <div class="responsibility-icon"><i class="fas fa-route"></i></div>
+                <div class="responsibility-text">Line Annotation - Path and boundary marking</div>
+              </li>
+            </ul>
+            
+            <h4>Additional Roles</h4>
+            <ul>
+              <li>
+                <div class="responsibility-icon"><i class="fas fa-code"></i></div>
+                <div class="responsibility-text">Front-end development for company platforms</div>
+              </li>
+              <li>
+                <div class="responsibility-icon"><i class="fas fa-pencil-ruler"></i></div>
+                <div class="responsibility-text">Designed marketing materials and UI components</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h5 class="subtitle">My Portfolio</h5>
+            <h2>Recent <span>Projects</span></h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="project-section-wrapper">
             <div class="row">
                 <div class="col-12">
                     <ul class="project-filters" data-aos="fade-up">
-                        <li class="filter active" data-filter="all">All</li>
+                        <li class="filter active" data-filter="all">All Projects</li>
                         <li class="filter" data-filter="web">Web Design</li>
-                        <li class="filter" data-filter="mobile">Graphic Designe</li>
+                        <li class="filter" data-filter="mobile">Graphic Design</li>
                         <li class="filter" data-filter="ui">UI/UX</li>
                         <li class="filter" data-filter="branding">Branding</li>
                     </ul>
@@ -508,15 +600,19 @@
                     <div class="project-card">
                         <div class="project-image">
                             <img src="websit.jpg" alt="Project 1" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="overlay-content">
-                                    <h3>verantixai Platform</h3>
-                                    <p>Web Design</p>
-                                    <div class="project-links">
-                                        <a href="https://verantixai.com/" class="project-link"><i class="fas fa-link"></i></a>
-                                        <!--<a href="#" class="project-link"><i class="fas fa-search"></i></a>-->
-                                    </div>
+                            <span class="project-category">Web Design</span>
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Verantixai Platform</h3>
+                            <p class="project-description">A modern AI annotation platform with intuitive interface and advanced features.</p>
+                            <div class="project-meta">
+                                <div class="project-tags">
+                                    <span class="project-tag">HTML5</span>
+                                    <span class="project-tag">CSS3</span>
+                                    <span class="project-tag">JavaScript</span>
                                 </div>
+                                <a href="https://verantixai.com/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
@@ -525,15 +621,18 @@
                     <div class="project-card">
                         <div class="project-image">
                             <img src="Grachice1.jpg" alt="Project 2" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="overlay-content">
-                                    <h3>Logo Designe</h3>
-                                    <p>Graphic Designe</p>
-                                    <div class="project-links">
-                                        <a href="https://www.behance.net/gallery/90217163/logoi-can-make-your-logo-i-work-until-you-are-fully" class="project-link"><i class="fas fa-link"></i></a>
-                                        <!--<a href="#" class="project-link"><i class="fas fa-search"></i></a>-->
-                                    </div>
+                            <span class="project-category">Graphic Design</span>
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Logo Design Collection</h3>
+                            <p class="project-description">Custom logos designed for various clients with unique brand identities.</p>
+                            <div class="project-meta">
+                                <div class="project-tags">
+                                    <span class="project-tag">Illustrator</span>
+                                    <span class="project-tag">Branding</span>
                                 </div>
+                                <a href="https://www.behance.net/gallery/90217163/logoi-can-make-your-logo-i-work-until-you-are-fully" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
@@ -542,15 +641,18 @@
                     <div class="project-card">
                         <div class="project-image">
                             <img src="Uiux.jpg" alt="Project 3" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="overlay-content">
-                                    <h3>Dashboard UI Kit</h3>
-                                    <p>UI/UX</p>
-                                    <div class="project-links">
-                                        <a href="https://www.behance.net/gallery/224418017/E-care-hub" class="project-link"><i class="fas fa-link"></i></a>
-                                       <!-- <a href="#" class="project-link"><i class="fas fa-search"></i></a>-->
-                                    </div>
+                            <span class="project-category">UI/UX</span>
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Dashboard UI Kit</h3>
+                            <p class="project-description">Comprehensive UI components for healthcare dashboard application.</p>
+                            <div class="project-meta">
+                                <div class="project-tags">
+                                    <span class="project-tag">Figma</span>
+                                    <span class="project-tag">UI/UX</span>
                                 </div>
+                                <a href="https://www.behance.net/gallery/224418017/E-care-hub" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
@@ -559,15 +661,18 @@
                     <div class="project-card">
                         <div class="project-image">
                             <img src="bandging.jpg" alt="Project 4" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="overlay-content">
-                                    <h3>Corporate Branding</h3>
-                                    <p>Branding</p>
-                                    <div class="project-links">
-                                        <a href="https://www.behance.net/gallery/224417591/Onekkisu-bd-brand-level" class="project-link"><i class="fas fa-link"></i></a>
-                                        <!--<a href="#" class="project-link"><i class="fas fa-search"></i></a>-->
-                                    </div>
+                            <span class="project-category">Branding</span>
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Corporate Branding</h3>
+                            <p class="project-description">Complete branding solutions for corporate identity and marketing materials.</p>
+                            <div class="project-meta">
+                                <div class="project-tags">
+                                    <span class="project-tag">Branding</span>
+                                    <span class="project-tag">Canva</span>
                                 </div>
+                                <a href="https://www.behance.net/gallery/224417591/Onekkisu-bd-brand-level" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
@@ -576,15 +681,19 @@
                     <div class="project-card">
                         <div class="project-image">
                             <img src="websit 2.jpg" alt="Project 5" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="overlay-content">
-                                    <h3>Working On this</h3>
-                                    <p>Web Design</p>
-                                    <div class="project-links">
-                                        <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                                        <!--<a href="#" class="project-link"><i class="fas fa-search"></i></a>-->
-                                    </div>
+                            <span class="project-category">Web Design</span>
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Coming Soon</h3>
+                            <p class="project-description">New website project in development with modern features and responsive layout.</p>
+                            <div class="project-meta">
+                                <div class="project-tags">
+                                    <span class="project-tag">HTML5</span>
+                                    <span class="project-tag">CSS3</span>
+                                    <span class="project-tag">JavaScript</span>
                                 </div>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
@@ -593,15 +702,18 @@
                     <div class="project-card">
                         <div class="project-image">
                             <img src="graphice 2.jpg" alt="Project 6" class="img-fluid">
-                            <div class="project-overlay">
-                                <div class="overlay-content">
-                                    <h3>Broshoer</h3>
-                                    <p>Graphic Designe</p>
-                                    <div class="project-links">
-                                        <a href="https://www.behance.net/gallery/88859919/Broshoer" class="project-link"><i class="fas fa-link"></i></a>
-                                        <!--<a href="#" class="project-link"><i class="fas fa-search"></i></a>-->
-                                    </div>
+                            <span class="project-category">Graphic Design</span>
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Brochure Design</h3>
+                            <p class="project-description">Professional brochure designs with attention to typography and visual hierarchy.</p>
+                            <div class="project-meta">
+                                <div class="project-tags">
+                                    <span class="project-tag">Illustrator</span>
+                                    <span class="project-tag">Print</span>
                                 </div>
+                                <a href="https://www.behance.net/gallery/88859919/Broshoer" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
@@ -609,11 +721,12 @@
             </div>
             <div class="row">
                 <div class="col-12 text-center mt-5" data-aos="fade-up">
-                    <a href="#" class="btn btn-primary">View All Projects</a>
+                    <a href="#" class="btn view-all-projects">View All Projects <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="section-padding bg-light">
@@ -629,7 +742,7 @@
             <div class="testimonial-card">
               <div class="testimonial-quote">
                 <i class="fas fa-quote-left"></i>
-                <p>" "Mahfuz has been an invaluable part of OnekkisuBD, consistently delivering top-notch graphic designs that perfectly capture our brand. His skill in both design and website maintenance keeps our online presence sharp and professional"</p>
+                <p>"Mahfuz has been an invaluable part of OnekkisuBD, consistently delivering top-notch graphic designs that perfectly capture our brand. His skill in both design and website maintenance keeps our online presence sharp and professional."</p>
               </div>
               <div class="testimonial-meta">
                 <div class="client-avatar">
@@ -653,33 +766,6 @@
             </div>
       
             <!-- Testimonial 2 -->
-           <!-- <div class="testimonial-card">
-              <div class="testimonial-quote">
-                <i class="fas fa-quote-left"></i>
-                <p>"Working with Mahfuz was a pleasure. His UI/UX designs transformed our mobile app and significantly improved user engagement. He's professional, creative, and delivers on time."</p>
-              </div>
-              <div class="testimonial-meta">
-                <div class="client-avatar">
-                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" loading="lazy">
-                  <div class="client-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                  </div>
-                </div>
-                <div class="client-info">
-                  <h4>Sarah Johnson</h4>
-                  <span>Product Manager, CreativeCo</span>
-                  <div class="client-logo">
-                    <img src="path/to/company-logo2.png" alt="CreativeCo" loading="lazy">
-                  </div>
-                </div>
-              </div>
-            </div>-->
-      
-            <!-- Testimonial 3 -->
             <div class="testimonial-card">
               <div class="testimonial-quote">
                 <i class="fas fa-quote-left"></i>
@@ -698,7 +784,7 @@
                 </div>
                 <div class="client-info">
                   <h4>Ishrat Jahan</h4>
-                  <span>CEO,verantixai</span>
+                  <span>CEO, Verantixai</span>
                   <div class="client-logo">
                     <img src="Verantax.jpg" alt="Verantixai" loading="lazy">
                   </div>
@@ -708,6 +794,7 @@
           </div>
         </div>
       </section>
+
 <!-- Add this RIGHT before your contact section -->
 <section class="work-alert">
     <div class="alert-track">
@@ -717,7 +804,7 @@
     </div>
   </section>
     <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-light">
+    <section id="contact" class="section-padding">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
                 <h5 class="subtitle">Get In Touch</h5>
@@ -736,7 +823,7 @@
                                 </div>
                                 <div class="contact-text">
                                     <h5>Email</h5>
-                                    <a href="mailto:mahfuz@example.com">mahfuzkhan726@gmail.com</a>
+                                    <a href="mailto:mahfuzkhan726@gmail.com">mahfuzkhan726@gmail.com</a>
                                 </div>
                             </div>
                             <div class="contact-item">
@@ -745,7 +832,7 @@
                                 </div>
                                 <div class="contact-text">
                                     <h5>Phone</h5>
-                                    <a href="tel:+8801234567890">+880 1632572282</a>
+                                    <a href="tel:+8801632572282">+880 1632572282</a>
                                 </div>
                             </div>
                             <div class="contact-item">
@@ -762,10 +849,10 @@
                             <h5>Follow Me</h5>
                             <div class="social-icons">
                                 <a href="https://www.facebook.com/Mahfuz726" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://x.com/Mdmahfuz726" target="_blank" class="social-icon" data-tooltip="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-                            <a href="https://www.behance.net/mdmahfuz" target="_blank" class="social-icon"><i class="fab fa-behance"></i>
-                            <a href="https://www.linkedin.com/in/md-mahfuz-190591199/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com/Mahfuz726" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                                <a href="https://x.com/Mdmahfuz726" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+                                <a href="https://www.behance.net/mdmahfuz" target="_blank" class="social-icon"><i class="fab fa-behance"></i></a>
+                                <a href="https://www.linkedin.com/in/md-mahfuz-190591199/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/Mahfuz726" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -790,7 +877,7 @@
                         <div class="form-group">
                           <textarea name="message" class="form-control" rows="6" placeholder="Your Message" required></textarea>
                         </div>
-                        <input type="hidden" name="_language" value="en"> <!-- Optional: Set form language -->
+                        <input type="hidden" name="_language" value="en">
                         <button type="submit" class="btn btn-primary">Send Message</button>
                         
                         <!-- Form submission feedback (hidden by default) -->
@@ -809,10 +896,10 @@
                 <p>Web Developer & UI/UX Designer</p>
                 <div class="footer-social">
                     <a href="https://www.facebook.com/Mahfuz726" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://x.com/Mdmahfuz726" target="_blank" class="social-icon" data-tooltip="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-                            <a href="https://www.behance.net/mdmahfuz" target="_blank" class="social-icon"><i class="fab fa-behance"></i>
-                            <a href="https://www.linkedin.com/in/md-mahfuz-190591199/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com/Mahfuz726" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/Mdmahfuz726" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.behance.net/mdmahfuz" target="_blank" class="social-icon"><i class="fab fa-behance"></i></a>
+                    <a href="https://www.linkedin.com/in/md-mahfuz-190591199/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Mahfuz726" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
                 </div>
             </div>
             <div class="footer-bottom" data-aos="fade-up" data-aos-delay="100">
@@ -836,8 +923,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <!-- Slick Carousel -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
 </body>

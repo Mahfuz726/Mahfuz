@@ -232,6 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Formspree will handle the actual submission
     })
   }
+  
 
   // Work alert animation
   document.querySelector(".work-alert").addEventListener("mouseenter", () => {
@@ -255,8 +256,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Close menu when clicking on a link
     navLinks.forEach((link) => {
       link.addEventListener("click", () => {
-        const bsCollapse = bootstrap.Collapse.getInstance(document.querySelector(".navbar-collapse"))
-        if (bsCollapse) {
+        const navbarCollapse = document.querySelector(".navbar-collapse")
+        if (navbarCollapse.classList.contains("show")) {
+          const bsCollapse = new bootstrap.Collapse(navbarCollapse)
           bsCollapse.hide()
           document.body.classList.remove("menu-open")
         }
@@ -319,6 +321,160 @@ document.addEventListener("DOMContentLoaded", () => {
       { passive: true },
     )
   })
+
+  // Fix for text rendering on mobile
+  function fixTextRendering() {
+    if (window.innerWidth <= 767) {
+      const textElements = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6, .project-title, .project-description")
+      textElements.forEach((el) => {
+        el.style.maxWidth = "100%"
+        el.style.wordWrap = "break-word"
+        el.style.overflowWrap = "break-word"
+      })
+    }
+  }
+
+  // Call the function on load and resize
+  fixTextRendering()
+  window.addEventListener("resize", fixTextRendering)
+
+  // Enhanced Testimonial Carousel
+  function initTestimonialCarousel() {
+    const testimonialCards = document.querySelectorAll(".testimonial-card")
+    const prevButton = document.querySelector(".prev-testimonial")
+    const nextButton = document.querySelector(".next-testimonial")
+    const dots = document.querySelectorAll(".testimonial-dot")
+
+    if (!testimonialCards.length || !prevButton || !nextButton) return
+
+    let currentIndex = 0
+    const totalSlides = testimonialCards.length
+
+    // Initialize for mobile view
+    function updateCarouselForMobile() {
+      if (window.innerWidth <= 991) {
+        testimonialCards.forEach((card, index) => {
+          if (index === currentIndex) {
+            card.style.display = "block"
+            card.style.opacity = "1"
+            card.style.transform = "translateY(0)"
+          } else {
+            card.style.display = "none"
+            card.style.opacity = "0"
+            card.style.transform = "translateY(20px)"
+          }
+        })
+
+        // Update dots
+        dots.forEach((dot, index) => {
+          if (index === currentIndex) {
+            dot.classList.add("active")
+          } else {
+            dot.classList.remove("active")
+          }
+        })
+      } else {
+        // Reset for desktop view
+        testimonialCards.forEach((card) => {
+          card.style.display = "block"
+          card.style.opacity = "1"
+          card.style.transform = "translateY(0)"
+        })
+      }
+    }
+
+    // Initial setup
+    updateCarouselForMobile()
+
+    // Previous slide
+    prevButton.addEventListener("click", () => {
+      if (window.innerWidth <= 991) {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides
+        updateCarouselForMobile()
+      }
+    })
+
+    // Next slide
+    nextButton.addEventListener("click", () => {
+      if (window.innerWidth <= 991) {
+        currentIndex = (currentIndex + 1) % totalSlides
+        updateCarouselForMobile()
+      }
+    })
+
+    // Dot navigation
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        if (window.innerWidth <= 991) {
+          currentIndex = index
+          updateCarouselForMobile()
+        }
+      })
+    })
+
+    // Update on resize
+    window.addEventListener("resize", updateCarouselForMobile)
+
+    // Auto-advance slides on mobile
+    let autoplayInterval
+
+    function startAutoplay() {
+      if (window.innerWidth <= 991) {
+        autoplayInterval = setInterval(() => {
+          currentIndex = (currentIndex + 1) % totalSlides
+          updateCarouselForMobile()
+        }, 5000)
+      }
+    }
+
+    function stopAutoplay() {
+      clearInterval(autoplayInterval)
+    }
+
+    // Start autoplay
+    startAutoplay()
+
+    // Pause autoplay on hover
+    const testimonialCarousel = document.getElementById("testimonialCarousel")
+    if (testimonialCarousel) {
+      testimonialCarousel.addEventListener("mouseenter", stopAutoplay)
+      testimonialCarousel.addEventListener("mouseleave", startAutoplay)
+    }
+
+    // Touch events for mobile swiping
+    let touchStartX = 0
+    let touchEndX = 0
+
+    testimonialCarousel.addEventListener(
+      "touchstart",
+      (e) => {
+        touchStartX = e.changedTouches[0].screenX
+      },
+      { passive: true },
+    )
+
+    testimonialCarousel.addEventListener(
+      "touchend",
+      (e) => {
+        touchEndX = e.changedTouches[0].screenX
+        handleSwipe()
+      },
+      { passive: true },
+    )
+
+    function handleSwipe() {
+      if (touchEndX < touchStartX - 50) {
+        // Swipe left, go to next
+        nextButton.click()
+      } else if (touchEndX > touchStartX + 50) {
+        // Swipe right, go to previous
+        prevButton.click()
+      }
+    }
+  }
+
+  // Initialize the enhanced testimonial carousel
+  initTestimonialCarousel()
 })
 
 // Function to initialize the animated background

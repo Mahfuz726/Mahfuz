@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="text-size-adjust" content="100%">
     <title>Mahfuz | Professional Portfolio</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,6 +20,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-fixes.css">
+    <link rel="stylesheet" href="testimonials.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <!-- Add this right after the opening <body> tag -->
@@ -93,7 +97,7 @@
                         <h2 class="text-uppercase typed-text animate__animated animate__fadeInUp animate__delay-2s"></h2>
                         <p class="animate__animated animate__fadeInUp animate__delay-2s">I craft exceptional digital experiences with clean, efficient code and innovative design solutions.</p>
                         <div class="hero-btns animate__animated animate__fadeInUp animate__delay-3s">
-                            <a href="#contact" class="btn btn-primary me-3">Get In Touch</a>
+                            <a href="#contact" class="btn btn-primary me-3 mb-2 mb-md-0">Get In Touch</a>
                             <a href="#projects" class="btn btn-outline">View Work</a>
                         </div>
                         <div class="social-icons animate__animated animate__fadeInUp animate__delay-3s">
@@ -107,14 +111,14 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-image animate__animated animate__fadeIn animate__delay-1s">
-                        <div class="image-wrapper">
-                            <img src="my1st.jpg" alt="Mahfuz" class="img-fluid">
-                            <div class="image-bg"></div>
+                        <!-- <div class="image-wrapper"> -->
+                            <img src="my 1st1.png" alt="Mahfuz" class="img-fluid">
+                            <!-- <div class="image-bg"></div> -->
                             <!-- <div class="image-badge">
                                 <div class="badge-content">
                                     <h5>2+ Years</h5>
-                                    <p>Experience</p> -->
-                                </div>
+                                    <p>Experience</p>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -216,7 +220,7 @@
                                             </div>
                                             <div class="timeline-body">
                                                 <span class="timeline-institution">Green University of Bangladesh, Dhaka</span>
-                                                <p>Focused on web development, software engineering, and programming concepts.</p>
+                                                <p>Currently pursuing degree with focus on web development and software engineering principles.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -231,7 +235,7 @@
                                             </div>
                                             <div class="timeline-body">
                                                 <span class="timeline-institution">Oxford Private Engineering Institute, Jashore</span>
-                                                <p> Studied electrical circuits, power systems, and practical electronics.</p>
+                                                <p>Completed comprehensive electrical engineering program with practical applications.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -246,7 +250,7 @@
                                             </div>
                                             <div class="timeline-body">
                                                 <span class="timeline-institution">Jashore Govt. City College, Jashore</span>
-                                                <p>Emphasized physics, chemistry, and higher mathematics.</p>
+                                                <p>Specialized in science stream with focus on physics, chemistry, and mathematics.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -261,7 +265,7 @@
                                             </div>
                                             <div class="timeline-body">
                                                 <span class="timeline-institution">Satkhira Govt. High School, Satkhira</span>
-                                                <p>Built foundation in general science, mathematics.</p> 
+                                                <p>Foundation in science and mathematics with distinction.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -605,12 +609,11 @@
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Verantixai Platform</h3>
-                            <p class="project-description">A modern AI annotation platform with intuitive interface and advanced features.</p>
+                            <p class="project-description">A modern AI annotation platform with intuitive interface.</p>
                             <div class="project-meta">
                                 <div class="project-tags">
                                     <span class="project-tag">HTML5</span>
                                     <span class="project-tag">CSS3</span>
-                                    <span class="project-tag">JavaScript</span>
                                 </div>
                                 <a href="https://verantixai.com/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                             </div>
@@ -670,7 +673,7 @@
                             <div class="project-meta">
                                 <div class="project-tags">
                                     <span class="project-tag">Branding</span>
-                                    <span class="project-tag">Canva</span>
+                                    <span class="project-tag">Identity</span>
                                 </div>
                                 <a href="https://www.behance.net/gallery/224417591/Onekkisu-bd-brand-level" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                             </div>
@@ -690,7 +693,6 @@
                             <div class="project-meta">
                                 <div class="project-tags">
                                     <span class="project-tag">HTML5</span>
-                                    <span class="project-tag">CSS3</span>
                                     <span class="project-tag">JavaScript</span>
                                 </div>
                                 <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -710,7 +712,7 @@
                             <p class="project-description">Professional brochure designs with attention to typography and visual hierarchy.</p>
                             <div class="project-meta">
                                 <div class="project-tags">
-                                    <span class="project-tag">Illustrator</span>
+                                    <span class="project-tag">InDesign</span>
                                     <span class="project-tag">Print</span>
                                 </div>
                                 <a href="https://www.behance.net/gallery/88859919/Broshoer" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
@@ -729,71 +731,134 @@
 </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="section-padding bg-light">
-        <div class="container">
-          <div class="section-title" data-aos="fade-up">
-            <h5 class="subtitle">Client Voices</h5>
-            <h2>Trusted <span>Endorsements</span></h2>
-            <div class="section-divider"></div>
-          </div>
+<section id="testimonials" class="section-padding bg-light testimonials-section">
+  <div class="container">
+    <div class="testimonial-wrapper">
+      <div class="section-title" data-aos="fade-up">
+        <h5 class="subtitle">Client Voices</h5>
+        <h2>Trusted <span>Endorsements</span></h2>
+        <div class="section-divider"></div>
+      </div>
       
-          <div class="testimonial-carousel">
-            <!-- Testimonial 1 -->
-            <div class="testimonial-card">
-              <div class="testimonial-quote">
-                <i class="fas fa-quote-left"></i>
-                <p>"Mahfuz has been an invaluable part of OnekkisuBD, consistently delivering top-notch graphic designs that perfectly capture our brand. His skill in both design and website maintenance keeps our online presence sharp and professional."</p>
-              </div>
-              <div class="testimonial-meta">
-                <div class="client-avatar">
-                  <img src="Anik Via.png" alt="Nahid Alam Anik" loading="lazy">
-                  <div class="client-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                </div>
-                <div class="client-info">
-                  <h4>Nahid Alam Anik</h4>
-                  <span>CEO, OnekKisubd</span>
-                  <div class="client-logo">
-                    <img src="Onekkisu.jpg" alt="Onekkisu" loading="lazy">
-                  </div>
-                </div>
+      <div class="testimonial-header" data-aos="fade-up" data-aos-delay="100">
+        <p>Discover what clients say about working with me. Their feedback reflects my commitment to excellence and client satisfaction.</p>
+      </div>
+    
+      <div class="testimonial-carousel" id="testimonialCarousel">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-quote">
+            <div class="testimonial-quote-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/>
+              </svg>
+            </div>
+            <p>"Mahfuz has been an invaluable part of OnekkisuBD, consistently delivering top-notch graphic designs that perfectly capture our brand. His skill in both design and website maintenance keeps our online presence sharp and professional."</p>
+          </div>
+          <div class="testimonial-meta">
+            <div class="client-avatar">
+              <img src="Anik Via.png" alt="Nahid Alam Anik" loading="lazy">
+              <div class="client-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
               </div>
             </div>
-      
-            <!-- Testimonial 2 -->
-            <div class="testimonial-card">
-              <div class="testimonial-quote">
-                <i class="fas fa-quote-left"></i>
-                <p>"At VerantixAI, Mahfuz has proven to be a skilled graphic designer and web developer. His precision in bounding box, polygon, and line annotation work, along with his web expertise, has greatly contributed to the quality and efficiency of our AI projects."</p>
-              </div>
-              <div class="testimonial-meta">
-                <div class="client-avatar">
-                  <img src="Israt 1.jpg" alt="Ishrat Jahan" loading="lazy">
-                  <div class="client-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                </div>
-                <div class="client-info">
-                  <h4>Ishrat Jahan</h4>
-                  <span>CEO, Verantixai</span>
-                  <div class="client-logo">
-                    <img src="Verantax.jpg" alt="Verantixai" loading="lazy">
-                  </div>
-                </div>
+            <div class="client-info">
+              <h4>Nahid Alam Anik</h4>
+              <span class="client-position">Chief Executive Officer</span>
+              <span class="client-company">OnekKisubd</span>
+              <div class="client-logo">
+                <img src="Onekkisu.jpg" alt="Onekkisu" loading="lazy">
               </div>
             </div>
           </div>
         </div>
-      </section>
+    
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-quote">
+            <div class="testimonial-quote-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/>
+              </svg>
+            </div>
+            <p>"At VerantixAI, Mahfuz has proven to be a skilled graphic designer and web developer. His precision in bounding box, polygon, and line annotation work, along with his web expertise, has greatly contributed to the quality and efficiency of our AI projects."</p>
+          </div>
+          <div class="testimonial-meta">
+            <div class="client-avatar">
+              <img src="Israt 1.jpg" alt="Ishrat Jahan" loading="lazy">
+              <div class="client-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="client-info">
+              <h4>Ishrat Jahan</h4>
+              <span class="client-position">Chief Executive Officer</span>
+              <span class="client-company">Verantixai</span>
+              <div class="client-logo">
+                <img src="Verantax.jpg" alt="Verantixai" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 (New) -->
+        <!-- <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="testimonial-quote">
+            <div class="testimonial-quote-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/>
+              </svg>
+            </div>
+            <p>"Working with Mahfuz was a game-changer for our brand identity. His creative approach and attention to detail resulted in a logo and visual identity that perfectly represents our company values. Highly recommended for any design project!"</p>
+          </div>
+          <div class="testimonial-meta">
+            <div class="client-avatar">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ahmed Rahman" loading="lazy">
+              <div class="client-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="client-info">
+              <h4>Ahmed Rahman</h4>
+              <span class="client-position">Marketing Director</span>
+              <span class="client-company">TechSolutions BD</span>
+              <div class="client-logo">
+                <img src="https://via.placeholder.com/150x50?text=TechSolutions" alt="TechSolutions" loading="lazy">
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-controls">
+        <button class="testimonial-control prev-testimonial">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <button class="testimonial-control next-testimonial">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="testimonial-dots">
+        <span class="testimonial-dot active" data-index="0"></span>
+        <span class="testimonial-dot" data-index="1"></span>
+        <span class="testimonial-dot" data-index="2"></span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Add this RIGHT before your contact section -->
 <section class="work-alert">
@@ -804,88 +869,110 @@
     </div>
   </section>
     <!-- Contact Section -->
-    <section id="contact" class="section-padding">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h5 class="subtitle">Get In Touch</h5>
-                <h2>Contact <span>Me</span></h2>
-                <div class="section-divider"></div>
-            </div>
+    <section id="contact" class="section-padding contact-section">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="section-title" data-aos="fade-up">
+            <h5 class="subtitle">Get In Touch</h5>
+            <h2>Contact <span>Me</span></h2>
+            <div class="section-divider"></div>
+          </div>
+          
+          <div class="contact-intro" data-aos="fade-up" data-aos-delay="100">
+            <p>Have a project in mind or want to discuss a collaboration? I'd love to hear from you. Fill out the form below or reach out through any of the contact methods.</p>
+          </div>
+        
+          <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
             <div class="row">
-                <div class="col-lg-5" data-aos="fade-right">
-                    <div class="contact-info">
-                        <h3>Let's talk about your project</h3>
-                        <p>I'm available for freelance work and would love to discuss your project. Feel free to contact me using any of the methods below.</p>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h5>Email</h5>
-                                    <a href="mailto:mahfuzkhan726@gmail.com">mahfuzkhan726@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h5>Phone</h5>
-                                    <a href="tel:+8801632572282">+880 1632572282</a>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h5>Location</h5>
-                                    <span>Dhaka, Bangladesh</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact-social">
-                            <h5>Follow Me</h5>
-                            <div class="social-icons">
-                                <a href="https://www.facebook.com/Mahfuz726" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://x.com/Mdmahfuz726" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-                                <a href="https://www.behance.net/mdmahfuz" target="_blank" class="social-icon"><i class="fab fa-behance"></i></a>
-                                <a href="https://www.linkedin.com/in/md-mahfuz-190591199/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://github.com/Mahfuz726" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
+              <div class="col-lg-5" data-aos="fade-right">
+                <div class="contact-info">
+                  <h3>Let's Discuss Your Project</h3>
+                  <p>I'm available for freelance work and would love to turn your ideas into reality. Feel free to contact me using any of the methods below.</p>
+                  <div class="contact-details">
+                    <div class="contact-item">
+                      <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                      </div>
+                      <div class="contact-text">
+                        <h5>Email</h5>
+                        <a href="mailto:mahfuzkhan726@gmail.com">mahfuzkhan726@gmail.com</a>
+                      </div>
                     </div>
+                    <div class="contact-item">
+                      <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                      </div>
+                      <div class="contact-text">
+                        <h5>Phone</h5>
+                        <a href="tel:+8801632572282">+880 1632572282</a>
+                      </div>
+                    </div>
+                    <div class="contact-item">
+                      <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                      </div>
+                      <div class="contact-text">
+                        <h5>Location</h5>
+                        <span>Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact-social">
+                    <h5>Connect With Me</h5>
+                    <div class="social-icons">
+                      <a href="https://www.facebook.com/Mahfuz726" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://x.com/Mdmahfuz726" target="_blank" class="social-icon" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                      <a href="https://www.behance.net/mdmahfuz" target="_blank" class="social-icon" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                      <a href="https://www.linkedin.com/in/md-mahfuz-190591199/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://github.com/Mahfuz726" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-lg-7" data-aos="fade-left">
-                    <form class="contact-form" action="https://formspree.io/f/xnndqpaq" method="POST">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-group">
-                              <input type="email" name="_replyto" class="form-control" placeholder="Your Email" required>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <input type="text" name="_subject" class="form-control" placeholder="Subject">
-                        </div>
-                        <div class="form-group">
-                          <textarea name="message" class="form-control" rows="6" placeholder="Your Message" required></textarea>
-                        </div>
-                        <input type="hidden" name="_language" value="en">
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                        
-                        <!-- Form submission feedback (hidden by default) -->
-                        <div class="form-feedback mt-3" style="display: none;"></div>
-                      </form>
-                </div>
+              </div>
+              <div class="col-lg-7" data-aos="fade-left">
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/xnndqpaq" method="POST">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group form-floating">
+                        <input type="text" name="name" id="name" class="form-control" placeholder=" " required>
+                        <label for="name" class="animated-label">Your Name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group form-floating">
+                        <input type="email" name="_replyto" id="email" class="form-control" placeholder=" " required>
+                        <label for="email" class="animated-label">Your Email</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group form-floating">
+                    <input type="text" name="_subject" id="subject" class="form-control" placeholder=" ">
+                    <label for="subject" class="animated-label">Subject</label>
+                  </div>
+                  <div class="form-group form-floating">
+                    <textarea name="message" id="message" class="form-control" rows="6" placeholder=" " required></textarea>
+                    <label for="message" class="animated-label">Your Message</label>
+                  </div>
+                  <input type="hidden" name="_language" value="en">
+                  <div class="form-button">
+                    <button type="submit" class="btn btn-primary">
+                      <span>Send Message</span>
+                      <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                    </button>
+                  </div>
+                  
+                  <!-- Form submission feedback -->
+                  <div id="formFeedback" class="form-feedback" style="display: none;"></div>
+                </form>
+              </div>
             </div>
+          </div>
+          
+          <!-- Floating decorative elements -->
+          <div class="contact-floating-element floating-circle" style="top: 20%; right: 10%;"></div>
+          <div class="contact-floating-element floating-square" style="bottom: 15%; left: 8%;"></div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
@@ -928,5 +1015,6 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
+    <script src="contact-form.js"></script>
 </body>
 </html>

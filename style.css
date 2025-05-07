@@ -3010,7 +3010,7 @@ body.menu-open .mobile-overlay {
   }
 }
 
-/* Testimonials Section */
+/* Testimonials Section
 .testimonial-carousel {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -3130,7 +3130,7 @@ body.menu-open .mobile-overlay {
 .testimonial-card:hover .client-logo img {
   opacity: 1;
   filter: grayscale(0%);
-}
+} */
 
 /* Contact Section */
 .contact-info h3 {

@@ -222,17 +222,75 @@
   }
 
   /* Testimonials section fixes */
-  .testimonial-card {
-    padding: 20px 15px;
-  }
+  @media (max-width: 767px) {
+    /* Testimonials Section Fixes */
+    .testimonials-section {
+        display: block !important; /* Force show the section */
+        padding: 40px 0; /* Add proper spacing */
+    }
+    
+    .testimonial-card {
+        display: block !important;
+        width: 100%;
+        margin-bottom: 25px;
+        padding: 20px;
+        background: #fff; /* Ensure background is visible */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Add subtle shadow */
+    }
+    
+    .testimonial-quote {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    
+    .testimonial-meta {
+        display: flex !important;
+        align-items: center;
+    }
+    
+    .client-image {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+    
+    .client-info h4 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .client-info p {
+        font-size: 13px;
+        color: #666;
+    }
+    
+    /* If using a slider/carousel */
+    .testimonial-slider {
+        overflow: visible !important;
+    }
+    
+    .testimonial-slide {
+        min-width: 100% !important;
+        padding: 0 15px;
+    }
+}
 
-  .testimonial-meta {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    margin-top: 15px;
-  }
+/* For very small devices */
+@media (max-width: 480px) {
+    .testimonial-card {
+        padding: 15px;
+    }
+    
+    .testimonial-quote {
+        font-size: 14px;
+    }
+    
+    .client-image {
+        width: 40px;
+        height: 40px;
+    }
+}
 
   /* Contact section fixes */
   .contact-item {

@@ -1,373 +1,330 @@
 /* Mobile Responsiveness Fixes */
 @media (max-width: 767px) {
-    /* Global fixes */
-    body {
-      overflow-x: hidden;
-      width: 100%;
-    }
-  
-    p,
-    li,
-    .skill-description,
-    .project-description,
-    .testimonial-quote p {
-      font-size: 14px !important;
-      line-height: 1.6 !important;
-    }
-  
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      word-wrap: break-word;
-    }
-  
-    .container {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  
-    /* Hero section fixes */
-    .hero-section {
-      height: auto;
-      min-height: 100vh;
-      padding-top: 80px;
-      padding-bottom: 50px;
-    }
-  
-    .hero-content h1 {
-      font-size: 32px;
-      line-height: 1.2;
-      margin-bottom: 15px;
-    }
-  
-    .hero-content h2 {
-      font-size: 20px;
-      min-height: 30px;
-    }
-  
-    .hero-content p {
-      font-size: 15px !important;
-    }
-  
-    .hero-image {
-      margin-top: 40px;
-    }
-  
-    /* Section spacing */
-    .section-padding {
-      padding: 60px 0;
-    }
-  
-    .section-title {
-      margin-bottom: 40px;
-    }
-  
-    .section-title h2 {
-      font-size: 28px;
-    }
-  
-    /* About section fixes */
-    .about-image {
-      margin-bottom: 30px;
-    }
-  
-    .about-content h3 {
-      font-size: 24px;
-    }
-  
-    .modern-tabs {
-      flex-direction: row;
-      overflow-x: auto;
-      white-space: nowrap;
-      padding: 5px;
-      -webkit-overflow-scrolling: touch;
-    }
-  
-    .modern-tabs::-webkit-scrollbar {
-      height: 3px;
-    }
-  
-    .modern-tabs::-webkit-scrollbar-thumb {
-      background: rgba(108, 99, 255, 0.3);
-    }
-  
-    .modern-tabs .nav-item {
-      flex-shrink: 0;
-    }
-  
-    .modern-tabs .nav-link {
-      padding: 10px 15px;
-      font-size: 14px;
-    }
-  
-    /* Skills section fixes */
-    .modern-skills-visual {
-      grid-template-columns: 1fr;
-    }
-  
-    .modern-skills-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .modern-skill-tag,
-    .modern-competency-card {
-      padding: 15px;
-    }
-  
-    /* Experience section fixes */
-    .premium-experience::before {
-      left: 20px;
-    }
-  
-    .experience-card {
-      width: calc(100% - 40px);
-      margin-left: 40px !important;
-      margin-right: 0 !important;
-      margin-bottom: 40px;
-    }
-  
-    .experience-card:nth-child(odd)::after,
-    .experience-card:nth-child(even)::after {
-      left: -32.5px;
-      right: auto;
-      width: 20px;
-      height: 20px;
-    }
-  
-    .experience-header {
-      padding: 20px;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
-    }
-  
-    .experience-content {
-      padding: 20px;
-    }
-  
-    .key-responsibilities ul {
-      grid-template-columns: 1fr;
-      gap: 15px;
-    }
-  
-    /* Projects section fixes */
-    .project-filters {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      justify-content: flex-start;
-      padding-bottom: 15px;
-      margin-bottom: 30px;
-      -webkit-overflow-scrolling: touch;
-    }
-  
-    .project-filters::-webkit-scrollbar {
-      height: 3px;
-    }
-  
-    .project-filters::-webkit-scrollbar-thumb {
-      background: rgba(108, 99, 255, 0.3);
-    }
-  
-    .project-filters .filter {
-      flex-shrink: 0;
-      white-space: nowrap;
-      margin: 0 5px;
-      padding: 8px 15px;
-      font-size: 13px;
-    }
-  
-    .project-card {
-      margin-bottom: 25px;
-    }
-  
-    .project-image {
-      height: 200px;
-    }
-  
-    .project-content {
-      padding: 20px;
-    }
-  
-    .project-title {
-      font-size: 18px;
-    }
-  
-    .project-description {
-      margin-bottom: 15px;
-    }
-  
-    .project-meta {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
-    }
-  
-    .project-tags {
-      flex-wrap: wrap;
-    }
-  
-    .project-link {
-      align-self: flex-end;
-    }
-  
-    /* Testimonials section fixes */
-    .testimonial-card {
-      padding: 25px 20px;
-    }
-  
-    .testimonial-meta {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 15px;
-    }
-  
-    .client-info {
-      text-align: center;
-    }
-  
-    /* Contact section fixes */
-    .contact-item {
-      flex-direction: column;
-      margin-bottom: 25px;
-    }
-  
-    .contact-icon {
-      margin-bottom: 15px;
-      margin-right: 0;
-    }
-  
-    .contact-form .form-control {
-      font-size: 16px;
-    }
-  
-    /* Footer fixes */
-    .footer {
-      padding-top: 70px;
-    }
-  
-    .footer-links {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-  
-    .footer-links a {
-      margin: 0 10px;
-    }
-  
-    /* Fix for text wrapping */
-    .project-title,
-    .section-title h2,
-    .about-content h3,
-    .experience-meta h3,
-    .contact-info h3,
-    .testimonial-quote p {
-      word-break: break-word;
-      overflow-wrap: break-word;
-      hyphens: auto;
-    }
-  
-    /* Fix for touch targets */
-    button,
-    a,
-    .nav-link,
-    .social-icon,
-    .project-link,
-    .filter {
-      min-height: 44px;
-      min-width: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  
-    /* Fix for work alert */
-    .alert-message {
-      font-size: 1.2rem;
-    }
+  /* Global fixes */
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+  }
+
+  /* Improved text sizing with better fallbacks */
+  p,
+  li {
+    font-size: 16px !important; /* Slightly larger for better readability */
+    line-height: 1.6 !important;
   }
   
-  /* Extra small devices */
-  @media (max-width: 575px) {
-    .hero-content h1 {
-      font-size: 28px;
-    }
-  
-    .section-title h2 {
-      font-size: 24px;
-    }
-  
-    .experience-card {
-      width: 100%;
-      margin-left: 0 !important;
-    }
-  
-    .experience-card::after {
-      display: none;
-    }
-  
-    .premium-experience::before {
-      display: none;
-    }
-  
-    .project-category {
-      font-size: 10px;
-      padding: 5px 10px;
-    }
-  
-    .project-tag {
-      font-size: 10px;
-      padding: 3px 8px;
-    }
-  
-    .footer-logo {
-      font-size: 28px;
-    }
-  
-    .back-to-top {
-      bottom: 20px;
-      right: 20px;
-      width: 40px;
-      height: 40px;
-    }
+  .skill-description,
+  .project-description,
+  .testimonial-quote p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Better heading handling */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 100%;
+  }
+
+  /* Hero section fixes */
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .hero-content h2 {
+    font-size: 18px;
+    min-height: auto;
+    margin-bottom: 20px;
+  }
+
+  .hero-content p {
+    font-size: 16px !important;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+  }
+
+  /* About section fixes */
+  .about-image {
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .about-content h3 {
+    font-size: 22px;
+  }
+
+  .modern-tabs {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 5px 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+  }
+
+  .modern-tabs::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome/Safari */
+  }
+
+  .modern-tabs .nav-item {
+    flex: 0 0 auto;
+    display: inline-block;
+    float: none;
+  }
+
+  .modern-tabs .nav-link {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  /* Skills section fixes */
+  .modern-skills-visual,
+  .modern-skills-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .modern-skill-tag,
+  .modern-competency-card {
+    padding: 12px;
+  }
+
+  /* Experience section fixes */
+  .premium-experience::before {
+    display: none; /* Remove timeline on small devices */
+  }
+
+  .experience-card {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 30px;
+  }
+
+  .experience-card::after {
+    display: none; /* Remove markers */
+  }
+
+  .experience-header {
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .experience-content {
+    padding: 15px;
+  }
+
+  .key-responsibilities ul {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-left: 15px;
+  }
+
+  /* Projects section fixes */
+  .project-filters {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .project-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .project-filters .filter {
+    padding: 6px 12px;
+    font-size: 13px;
+    margin: 0 4px;
+  }
+
+  .project-card {
+    margin-bottom: 20px;
+  }
+
+  .project-image {
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .project-content {
+    padding: 15px;
+  }
+
+  .project-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .project-description {
+    margin-bottom: 12px;
+  }
+
+  .project-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .project-tags {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .project-link .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Testimonials section fixes */
+  .testimonial-card {
+    padding: 20px 15px;
+  }
+
+  .testimonial-meta {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  /* Contact section fixes */
+  .contact-item {
+    margin-bottom: 20px;
+  }
+
+  .contact-icon {
+    margin-bottom: 10px;
+  }
+
+  .contact-form .form-control {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  /* Footer fixes */
+  .footer {
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Touch target improvements */
+  button,
+  a,
+  .nav-link,
+  .social-icon,
+  .project-link,
+  .filter {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+  }
+
+  /* Button spacing */
+  .btn + .btn {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  /* Hide non-essential elements on mobile */
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+/* Extra small devices (phones, 575px and down) */
+@media (max-width: 575px) {
+  .hero-content h1 {
+    font-size: 24px;
   }
   
-  /* Fix for very small devices */
-  @media (max-width: 360px) {
-    .hero-content h1 {
-      font-size: 24px;
-    }
-  
-    .hero-content h2 {
-      font-size: 18px;
-    }
-  
-    .hero-btns .btn {
-      padding: 8px 15px;
-      font-size: 13px;
-      display: block;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  
-    .hero-btns {
-      display: block;
-    }
-  
-    .social-icons {
-      justify-content: center;
-    }
-  
-    .project-content {
-      padding: 15px;
-    }
-  
-    .project-title {
-      font-size: 16px;
-    }
+  .hero-btns {
+    flex-direction: column;
   }
   
+  .hero-btns .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .section-title h2 {
+    font-size: 22px;
+  }
+  
+  .project-image {
+    height: 150px;
+  }
+}
+
+/* Very small devices (360px and down) */
+@media (max-width: 360px) {
+  .hero-content h1 {
+    font-size: 22px;
+  }
+  
+  .hero-content h2 {
+    font-size: 16px;
+  }
+  
+  .section-padding {
+    padding: 30px 0;
+  }
+  
+  .project-content {
+    padding: 12px;
+  }
+}

@@ -2,10 +2,197 @@ document.addEventListener("DOMContentLoaded", function() {
   // =============================================
   // Core Initialization
   // =============================================
-  
+
   // Check for mobile device
   const isMobile = window.innerWidth <= 767 || ('ontouchstart' in window);
-  
+
+  // =============================================
+  // Projects Data
+  // =============================================
+  const projectsData = [
+    {
+      id: 1,
+      title: "Verantixai Platform",
+      description: "A modern AI annotation platform with intuitive interface.",
+      image: "websit.jpg",
+      category: "web",
+      categoryName: "Web Devolepment",
+      tags: ["HTML5", "CSS3"],
+      link: "https://verantixai.com/"
+    },
+    {
+      id: 2,
+      title: "Logo Design Collection",
+      description: "Custom logos designed for various clients with unique brand identities.",
+      image: "Grachice1.jpg",
+      category: "mobile",
+      categoryName: "Graphic Design",
+      tags: ["Illustrator", "Branding"],
+      link: "https://www.behance.net/gallery/90217163/logoi-can-make-your-logo-i-work-until-you-are-fully"
+    },
+    {
+      id: 3,
+      title: "Dashboard UI Kit",
+      description: "Comprehensive UI components for healthcare dashboard application.",
+      image: "Uiux.jpg",
+      category: "ui",
+      categoryName: "UI/UX",
+      tags: ["Figma", "UI/UX"],
+      link: "https://www.behance.net/gallery/224418017/E-care-hub"
+    },
+    {
+      id: 4,
+      title: "Corporate Branding",
+      description: "Complete branding solutions for corporate identity and marketing materials.",
+      image: "bandging.jpg",
+      category: "branding",
+      categoryName: "Branding",
+      tags: ["Branding", "Identity"],
+      link: "https://www.behance.net/gallery/224417591/Onekkisu-bd-brand-level"
+    },
+    {
+      id: 5,
+      title: "Web App Design - HisabWala",
+      description: "HisabWala – Smart Accounting Web App Design with user-friendly interface.",
+      image: "HisabWala web.png",
+      category: "ui",
+      categoryName: "UI/UX",
+      tags: ["Figma", "UI/UX"],
+      link: "https://www.behance.net/gallery/238118061/HisabWala-Smart-Accounting-Web-App-Design"
+    },
+    {
+      id: 6,
+      title: "Modern e-commerce website",
+      description: "A clean, modern e-commerce website design — built for both customers and sellers",
+      image: "Techno.png",
+      category: "ui",
+      categoryName: "UI/UX",
+      tags: ["Figma", "UI/UX"],
+      link: "https://www.behance.net/gallery/237648767/Modern-E-Commerce-Website-for-Buyers-Sellers"
+    },
+    {
+      id: 7,
+      title: "HisabWala – Mobile App UI Design",
+      description: "HisabWala is a smart accounting mobile app built for small business owners",
+      image: "HisabWala mobile.png",
+      category: "ui",
+      categoryName: "UI/UX",
+      tags: ["Figma", "UI/UX"],
+      link: "https://www.behance.net/gallery/238118337/HisabWala-Mobile-App-UI-Design"
+    },
+    {
+      id: 8,
+      title: "Pet Food App – Mobile UI Design",
+      description: "Pet Food App is a modern and friendly mobile UI concept created for pet owners to easily",
+      image: "pet mobile.png",
+      category: "ui",
+      categoryName: "UI/UX",
+      tags: ["Figma", "UI/UX"],
+      link: "https://www.behance.net/gallery/238118595/Pet-Food-App-Mobile-UI-Design"
+    },
+    {
+      id: 9,
+      title: "Admin Dashboard – Web UI Design",
+      description: "This is a clean and minimal Admin Dashboard concept designed for managing products.",
+      image: "Dash bord.png",
+      category: "ui",
+      categoryName: "UI/UX",
+      tags: ["Figma", "UI/UX"],
+      link: "https://www.behance.net/gallery/238119171/Admin-Dashboard-Web-UI-Design"
+    },
+    {
+      id: 10,
+      title: "TechRiv – Website UI/UX Design",
+      description: "TechRiv is a creative tech company website concept designed to communicate",
+      image: "TechRiv.png",
+      category: "ui",
+      categoryName: "UI/UX",
+      tags: ["Figma", "UI/UX"],
+      link: "https://www.behance.net/gallery/238118931/TechRiv-Website-UI-Design"
+    },
+    {
+      id: 6,
+      title: "Coming Soon",
+      description: "New website project in development with modern features and responsive layout.",
+      image: "websit 2.jpg",
+      category: "web",
+      categoryName: "Web Web Devolepment",
+      tags: ["HTML5", "JavaScript"],
+      link: "#"
+    },
+    {
+      id: 7,
+      title: "Brochure Design",
+      description: "Professional brochure designs with attention to typography and visual hierarchy.",
+      image: "graphice 2.jpg",
+      category: "mobile",
+      categoryName: "Graphic Design",
+      tags: ["InDesign", "Print"],
+      link: "https://www.behance.net/gallery/88859919/Broshoer"
+    },
+      
+  ];
+
+  // =============================================
+  // Project Rendering and Management
+  // =============================================
+  let currentFilter = 'all';
+  let showAllProjects = false;
+  const projectsPerPage = 6;
+
+  function renderProjects(filter = 'all', showAll = false) {
+    const projectGrid = document.querySelector('.project-grid');
+    if (!projectGrid) return;
+
+    let filteredProjects = filter === 'all' ? projectsData : projectsData.filter(project => project.category === filter);
+    const projectsToShow = showAll ? filteredProjects : filteredProjects.slice(0, projectsPerPage);
+    const hasMoreProjects = filteredProjects.length > projectsPerPage;
+
+    projectGrid.innerHTML = '';
+
+    projectsToShow.forEach((project, index) => {
+      const projectHTML = `
+        <div class="col-lg-4 col-md-6 project-item ${project.category}" data-aos="fade-up" data-aos-delay="${(index % 6 + 1) * 100}">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="${project.image}" alt="${project.title}" class="img-fluid">
+              <span class="project-category">${project.categoryName}</span>
+              <div class="project-overlay"></div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">${project.title}</h3>
+              <p class="project-description">${project.description}</p>
+              <div class="project-meta">
+                <div class="project-tags">
+                  ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
+                </div>
+                <a href="${project.link}" class="project-link" ${project.link !== '#' ? 'target="_blank"' : ''}><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      projectGrid.insertAdjacentHTML('beforeend', projectHTML);
+    });
+
+    // Update "See More" button
+    updateSeeMoreButton(hasMoreProjects, showAll);
+  }
+
+  function updateSeeMoreButton(hasMore, isExpanded) {
+    const viewAllBtn = document.querySelector('.view-all-projects');
+    if (!viewAllBtn) return;
+
+    const buttonContainer = viewAllBtn.closest('.row');
+
+    if (hasMore) {
+      viewAllBtn.style.display = 'inline-block';
+      viewAllBtn.innerHTML = isExpanded ? 'See Less <i class="fas fa-arrow-up ms-2"></i>' : 'See More <i class="fas fa-arrow-down ms-2"></i>';
+    } else {
+      viewAllBtn.style.display = 'none';
+    }
+  }
+
   // =============================================
   // Preloader
   // =============================================
@@ -113,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function() {
         backToTopButton.classList.remove("active");
       }
     });
-    
+
     backToTopButton.addEventListener("click", function(e) {
       e.preventDefault();
       window.scrollTo({
@@ -190,42 +377,55 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // =============================================
-  // Project Filtering
-  // =============================================
-  const filters = document.querySelectorAll(".filter");
-  const projectItems = document.querySelectorAll(".project-item");
+ // =============================================
+// Project Filtering & View All Functionality
+// =============================================
+const filters = document.querySelectorAll(".filter");
+const viewAllBtn = document.querySelector(".view-all-projects");
 
-  if (filters.length > 0 && projectItems.length > 0) {
-    filters.forEach((filter) => {
-      filter.addEventListener("click", function() {
-        filters.forEach((f) => f.classList.remove("active"));
-        this.classList.add("active");
+// Initialize projects on page load
+renderProjects();
 
-        const filterValue = this.getAttribute("data-filter");
+// Project Filtering
+if (filters.length > 0) {
+  filters.forEach((filter) => {
+    filter.addEventListener("click", function() {
+      filters.forEach((f) => f.classList.remove("active"));
+      this.classList.add("active");
 
-        let delay = 0;
-        projectItems.forEach((item) => {
-          if (filterValue === "all" || item.classList.contains(filterValue)) {
-            setTimeout(() => {
-              item.style.display = "block";
-              setTimeout(() => {
-                item.style.opacity = "1";
-                item.style.transform = "translateY(0)";
-              }, 50);
-            }, delay);
-            delay += 100;
-          } else {
-            item.style.opacity = "0";
-            item.style.transform = "translateY(20px)";
-            setTimeout(() => {
-              item.style.display = "none";
-            }, 300);
-          }
-        });
-      });
+      currentFilter = this.getAttribute("data-filter");
+      renderProjects(currentFilter, showAllProjects);
     });
-  }
+  });
+}
+
+// View All Projects Button
+if (viewAllBtn) {
+  viewAllBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    showAllProjects = !showAllProjects;
+    renderProjects(currentFilter, showAllProjects);
+
+    if (showAllProjects) {
+      // Scroll to show new projects
+      setTimeout(() => {
+        this.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+      }, 100);
+    } else {
+      // Scroll back to projects section
+      setTimeout(() => {
+        document.querySelector("#projects").scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }, 100);
+    }
+  });
+}
 
   // =============================================
   // TESTIMONIALS SECTION FIX (Mobile Optimization)
@@ -245,7 +445,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Mobile-specific setup
     if (isMobile) {
       carousel.classList.add('mobile-carousel');
-      
+
       const cards = carousel.querySelectorAll('.testimonial-card');
       if (cards.length > 0) {
         // Reset all cards first
@@ -257,7 +457,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // If more than one card, setup simple carousel
         if (cards.length > 1) {
           let currentIndex = 0;
-          
+
           // Initially show only first card
           cards.forEach((card, i) => {
             card.style.display = i === 0 ? 'block' : 'none';
@@ -271,27 +471,33 @@ document.addEventListener("DOMContentLoaded", function() {
           }, 5000);
         }
       }
-    } 
-    // Desktop setup with Slick if available
-    else if (typeof $.fn.slick !== 'undefined') {
-      $(carousel).slick({
-        dots: true,
-        arrows: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        responsive: [
-          {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 1,
+    }
+    // Desktop setup with Slick if available (defensive checks)
+    else if (window.jQuery && window.jQuery.fn && window.jQuery.fn.slick && carousel.querySelectorAll('.testimonial-card').length > 0) {
+      try {
+        $(carousel).slick({
+          dots: true,
+          arrows: false,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 5000,
+          responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 1,
+              }
             }
-          }
-        ]
-      });
+          ]
+        });
+      } catch (err) {
+        // If slick throws for some reason, log and continue gracefully
+        // (Slick's minified errors can appear as cryptic 'add' errors when DOM is unexpected)
+        console.warn('Slick initialization failed for testimonial carousel:', err);
+      }
     }
   }
 
@@ -388,7 +594,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Initial optimization
   optimizeTextRendering();
-  
+
   // Re-optimize on resize
   window.addEventListener("resize", function() {
     optimizeTextRendering();

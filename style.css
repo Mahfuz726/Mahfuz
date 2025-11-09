@@ -2068,6 +2068,20 @@ img {
   .project-card {
     margin-bottom: 20px;
   }
+
+  /* Ensure project grid and items are visible and stacked properly on small screens */
+  .project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .project-item {
+    display: block;
+    width: 100%;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
   
   .project-image {
     height: 180px;

@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
       link: "https://www.behance.net/gallery/238118931/TechRiv-Website-UI-Design"
     },
     {
-      id: 6,
+      id: 11,
       title: "Coming Soon",
       description: "New website project in development with modern features and responsive layout.",
       image: "websit 2.jpg",
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
       link: "#"
     },
     {
-      id: 7,
+      id: 12,
       title: "Brochure Design",
       description: "Professional brochure designs with attention to typography and visual hierarchy.",
       image: "graphice 2.jpg",
